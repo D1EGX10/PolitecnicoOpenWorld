@@ -1007,7 +1007,14 @@ class ZombieInteriorViewModel @dagger.assisted.AssistedInject constructor(
     fun onSecondaryReleased() {
         val held = System.currentTimeMillis() - yPressStartMs
         if (held >= Y_HOLD_FOR_MENU_MS) {
-            _state.update { it.copy(showInventory = !it.showInventory, showWeaponMenu = false) }
+            //Agregado3
+            _state.update {
+                it.copy(
+                    showInventory = !it.showInventory,
+                    showWeaponMenu = false,
+                    selectedInventorySlot = null
+                )
+            }//Fin agregado3
         }
     }
 
