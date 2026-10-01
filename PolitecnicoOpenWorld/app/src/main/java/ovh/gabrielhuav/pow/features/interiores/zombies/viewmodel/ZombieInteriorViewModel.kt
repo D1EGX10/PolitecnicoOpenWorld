@@ -1046,10 +1046,15 @@ class ZombieInteriorViewModel @dagger.assisted.AssistedInject constructor(
     fun dismissWeaponMenu() {
         _state.update { it.copy(showWeaponMenu = false) }
     }
-
+//Agregado4
     fun dismissInventory() {
-        _state.update { it.copy(showInventory = false) }
-    }
+        _state.update {
+            it.copy(
+                showInventory = false,
+                selectedInventorySlot = null
+            )
+        }
+    }//Fin agregado4
 
     /**
      * PUZZLE Misión 1: PRUEBA una llave del inventario. Solo "abre" estando en ENCB_lab2 (es ahí donde

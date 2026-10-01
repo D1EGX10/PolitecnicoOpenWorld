@@ -98,7 +98,8 @@ fun ZombieHud(
     onDismissInventory: () -> Unit,
     // PUZZLE Misión 1: probar / desechar la llave del inventario (assetPath).
     onTestKey: (String) -> Unit = {},
-    onDiscardKey: (String) -> Unit = {}
+    onDiscardKey: (String) -> Unit = {},
+    onSelectSlot: (Int) -> Unit = {}//Agregado4.2
 ) {
     val configuration = LocalConfiguration.current
     val isPortrait = configuration.orientation == Configuration.ORIENTATION_PORTRAIT
